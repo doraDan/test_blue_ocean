@@ -12,7 +12,7 @@ class Url:
         "modelservice": "/modelservice/task/v2/list/cityId/1",
         "api": "/api/healthcheck",
         "order": "/tequila/healthcheck",
-        "accounting": "/accounting/health",
+        # "accounting": "/accounting/health",
         "basic_server": "/basic-service-0.2.0/health",
         "dfinance_coupon": "/coupon/health"
     }
@@ -34,7 +34,7 @@ class Url:
         "modelservice": http + "10.9.158.77:8080" + interface['modelservice'],
         "api": http + "api.qa.imdada.cn" + interface["api"],
         "order": http + "10.9.178.162:80" + interface["order"],
-        "accouting": http + "10.9.126.32:8080" + interface["accounting"],
+        # "accouting": http + "10.9.126.32:8080" + interface["accounting"],
         "basic_server": http + "10.9.174.15:8080" + interface["basic_server"],
         "dfinance_coupon": http + "10.9.105.87:8080" + interface["dfinance_coupon"]
     }
@@ -45,7 +45,7 @@ class Url:
         "modelservice": "status",
         "api": "status",
         "order": "ok",
-        "accouting": "true",
+        # "accouting": "true",
         "basic_server": "",
         "dfinance_coupon": "true"
     }
