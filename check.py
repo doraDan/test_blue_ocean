@@ -17,7 +17,7 @@ for key, value in urlsdict.iteritems():
     print
     print key
     response = requests.get(urlsdict[key])
-    print response.text
+    print urlsdict[key]
     print response.status_code
     # print urlsdict[key] + response.text
     assert response.status_code == 200
