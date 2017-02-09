@@ -17,6 +17,8 @@ for key, value in urlsdict.iteritems():
     print
     print key
     response = requests.get(urlsdict[key])
+    print response.text
+    print response.status_code
     # print urlsdict[key] + response.text
     assert response.status_code == 200
     assert response.text.__contains__(checkstr[key])
