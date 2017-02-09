@@ -10,7 +10,7 @@ from urls import Url
 if sys.argv[1] == "dev":
     urlsdict = Url.urls_dev
 elif sys.argv[1] == "qa":
-    urls = Url.urls_qa
+    urlsdict = Url.urls_qa
 checkstr = Url.check_str
 
 for key, value in urlsdict.iteritems():
