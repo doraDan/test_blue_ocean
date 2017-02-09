@@ -1,6 +1,5 @@
 # -*- coding: utf8 -*-
 
-
 class Url:
     def __init__(self):
         pass
