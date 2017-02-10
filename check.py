@@ -27,4 +27,4 @@ for key, value in urlsdict.iteritems():
     except Exception,e:
         print e
 
-# Celerycheck().check()
+Celerycheck().check()
