@@ -40,8 +40,8 @@
       <file leaf-file-name="celerycheck.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/celerycheck.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+            <state relative-caret-position="201">
+              <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
               <folding>
                 <element signature="e#23#38#0" expanded="true" />
               </folding>
@@ -71,8 +71,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/check.py" />
         <option value="$PROJECT_DIR$/urls.py" />
+        <option value="$PROJECT_DIR$/check.py" />
         <option value="$PROJECT_DIR$/celerycheck.py" />
       </list>
     </option>
@@ -486,8 +486,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/celerycheck.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+        <state relative-caret-position="201">
+          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
           <folding>
             <element signature="e#23#38#0" expanded="true" />
           </folding>

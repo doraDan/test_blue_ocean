@@ -14,7 +14,7 @@ class Celerycheck:
 
     qa_host = {
         "order_celery": '''ssh app@10.9.111.183 "ps -ef |grep order_celery | grep -v grep"''',
-        "celery_python": '''ssh root@10.9.158.110 "ps -ef |grep celery | grep -v grep"''',
+        "celery_python": '''ssh app@10.9.158.110 "ps -ef |grep celery | grep -v grep"''',
     }
 
     def check(self):
@@ -25,7 +25,7 @@ class Celerycheck:
         # assert output.read() != ""
         # assert 1 != 2
         for key, value in self.dev_host.iteritems():
-            output = os.popen(self.dev_host[key])
+            output = os.popen(self.qa_host[key])
             str_output = output.read()
             print self.qa_host[key]
             print str_output
