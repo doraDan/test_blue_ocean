@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="0" failures="0" name="pytest" skips="0" tests="2" time="0.101"><testcase classname="check.CeleryCheck" file="celerycheck.py" line="23" name="test_check_celery" time="0.000448226928711"></testcase><testcase classname="check.Url" file="urls.py" line="64" name="test_check_server" time="0.00026798248291"></testcase></testsuite>

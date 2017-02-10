@@ -62,21 +62,79 @@ class Url(unittest.TestCase):
         "accouting": "true"
     }
 
-    def test_check_server(self):
-        """
-            环境服务是否启动
-        """
-        urls_dict = self.urls_dict
-        for key, value in urls_dict.iteritems():
-            print
-            print key
-            response = requests.get(urls_dict[key])
-            # print urls_dict[key]
-            # print response.status_code
-            try:
-                assert response.status_code == 200
-                assert response.text.__contains__(self.check_str[key])
-                print urls_dict[key], response.status_code
-            except Exception, e:
-                print e
-                print key, "fail"
+
+    def test_check_openapi_old(self):
+        """openAPI_老服务"""
+        resopnse = requests.get(self.urls_dict["openapi_old"])
+        assert resopnse.status_code == 200
+        assert resopnse.text.__contains__(self.check_str["openapi_old"])
+
+    def test_check_openapi_new(self):
+        """openAPI_新服务"""
+        resopnse = requests.get(self.urls_dict["openapi_new"])
+        assert resopnse.status_code == 201
+        assert resopnse.text.__contains__(self.check_str["openapi_new"])
+    def test_check_dfinance(self):
+        """账户"""
+        resopnse = requests.get(self.urls_dict["dfinance"])
+        assert resopnse.status_code == 200
+        assert resopnse.text.__contains__(self.check_str["dfinance"])
+
+    def test_check_modelservice(self):
+        """modelservice"""
+        resopnse = requests.get(self.urls_dict["modelservice"])
+        assert resopnse.status_code == 200
+        assert resopnse.text.__contains__(self.check_str["modelservice"])
+
+    def test_check_api(self):
+        """api"""
+        resopnse = requests.get(self.urls_dict["api"])
+        assert resopnse.status_code == 200
+        assert resopnse.text.__contains__(self.check_str["api"])
+
+    def test_check_order(self):
+        """订单(order/orderadd)"""
+        resopnse = requests.get(self.urls_dict["order"])
+        assert resopnse.status_code == 200
+        assert resopnse.text.__contains__(self.check_str["order"])
+
+    def test_check_basic_server(self):
+        """运费服务"""
+        resopnse = requests.get(self.urls_dict["basic_server"])
+        assert resopnse.status_code == 200
+        assert resopnse.text.__contains__(self.check_str["basic_server"])
+
+    def test_check_dfinance_coupon(self):
+        """优惠券-账户"""
+        resopnse = requests.get(self.urls_dict["dfinance_coupon"])
+        assert resopnse.status_code == 200
+        assert resopnse.text.__contains__(self.check_str["dfinance_coupon"])
+
+    def test_check_business_coupon(self):
+        """优惠券-业务"""
+        resopnse = requests.get(self.urls_dict["business_coupon"])
+        assert resopnse.status_code == 200
+        assert resopnse.text.__contains__(self.check_str["business_coupon"])
+
+    def test_check_accouting(self):
+        """记账服务"""
+        resopnse = requests.get(self.urls_dict["accouting"])
+        assert resopnse.status_code == 200
+        assert resopnse.text.__contains__(self.check_str["accouting"])
+
+    # def test_check_server(self):
+    #     """
+    #         环境服务是否启动
+    #     """
+    #     urls_dict = self.urls_dict
+    #     for key, value in urls_dict.iteritems():
+    #         print
+    #         print key
+    #         response = requests.get(urls_dict[key])
+    #         try:
+    #             assert response.status_code == 200
+    #             assert response.text.__contains__(self.check_str[key])
+    #             print urls_dict[key], response.status_code
+    #         except Exception, e:
+    #             print e
+    #             print key, "fail"

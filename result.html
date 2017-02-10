@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>environment check result</h1>
-<p class='attribute'><strong>Start Time:</strong> 2017-02-10 14:30:09</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:01.402743</p>
-<p class='attribute'><strong>Status:</strong> Pass 2</p>
+<p class='attribute'><strong>Start Time:</strong> 2017-02-10 16:39:08</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:00.476474</p>
+<p class='attribute'><strong>Status:</strong> Pass 10 Failure 2</p>
 
 <p class='description'></p>
 </div>
@@ -221,33 +221,41 @@ function showOutput(id, name) {
     <td>View</td>
 </tr>
 
-<tr class='passClass'>
+<tr class='failClass'>
     <td>celerycheck.CeleryCheck: celery环境检查</td>
+    <td>2</td>
     <td>1</td>
     <td>1</td>
     <td>0</td>
-    <td>0</td>
-    <td><a href="javascript:showClassDetail('c1',1)">Detail</a></td>
+    <td><a href="javascript:showClassDetail('c1',2)">Detail</a></td>
 </tr>
 
 <tr id='pt1.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_check: celery检查</div></td>
+    <td class='none'><div class='testcase'>test_check_celery_python: celery_python服务</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='ft1.2' class='none'>
+    <td class='failCase'><div class='testcase'>test_check_order_celery: order_celery服务</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
-        pass</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.2')" >
+        fail</a>
 
-    <div id='div_pt1.1' class="popup_window">
+    <div id='div_ft1.2' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.2').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.1: celery_java fail
-order_celery fail
-celery_python ok
+ft1.2: order_celery服务状态异常
+
+Traceback (most recent call last):
+  File "/Users/yaodan/Documents/workspace/checkhealth/celerycheck.py", line 32, in test_check_order_celery
+    assert str_output.__len__() &gt; 0
+AssertionError
 
 
         </pre>
@@ -257,48 +265,69 @@ celery_python ok
     </td>
 </tr>
 
-<tr class='passClass'>
+<tr class='failClass'>
     <td>urls.Url: 检查各个环境服务是否启动</td>
-    <td>1</td>
+    <td>10</td>
+    <td>9</td>
     <td>1</td>
     <td>0</td>
-    <td>0</td>
-    <td><a href="javascript:showClassDetail('c2',1)">Detail</a></td>
+    <td><a href="javascript:showClassDetail('c2',10)">Detail</a></td>
 </tr>
 
 <tr id='pt2.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_check_url</div></td>
+    <td class='none'><div class='testcase'>test_check_accouting: 记账服务</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt2.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_check_api: api</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt2.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_check_basic_server: 运费服务</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt2.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_check_business_coupon: 优惠券-业务</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt2.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_check_dfinance: 账户</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt2.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_check_dfinance_coupon: 优惠券-账户</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt2.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_check_modelservice: modelservice</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='ft2.8' class='none'>
+    <td class='failCase'><div class='testcase'>test_check_openapi_new: openAPI_新服务</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.1')" >
-        pass</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.8')" >
+        fail</a>
 
-    <div id='div_pt2.1' class="popup_window">
+    <div id='div_ft2.8' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.1').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.8').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt2.1: 
-openapi_new http://192.168.1.202:8981/health 200
-
-dfinance_coupon http://192.168.1.150:13101/coupon/health 200
-
-api http://api.dev.imdada.cn/api/healthcheck 200
-
-basic_server http://192.168.1.202:8090/basic-service-0.2.0/health 200
-
-dfinance http://dfinance.dev.imdada.cn/dfinance/health 200
-
-modelservice http://192.168.1.202:8080/modelservice/task/v2/list/cityId/1 200
-
-openapi_old http://public.dev.imdada.cn/openapi/healthcheck 200
-
-order http://192.168.1.201:80/tequila/healthcheck 200
-
-business_coupon http://192.168.1.201:8092/coupon_service/healthcheck 200
+ft2.8: Traceback (most recent call last):
+  File "/Users/yaodan/Documents/workspace/checkhealth/urls.py", line 75, in test_check_openapi_new
+    assert resopnse.status_code == 201
+AssertionError
 
 
         </pre>
@@ -306,13 +335,23 @@ business_coupon http://192.168.1.201:8092/coupon_service/healthcheck 200
     <!--css div popup end-->
 
     </td>
+</tr>
+
+<tr id='pt2.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_check_openapi_old: openAPI_老服务</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt2.10' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_check_order: 订单(order/orderadd)</div></td>
+    <td colspan='5' align='center'>pass</td>
 </tr>
 
 <tr id='total_row'>
     <td>Total</td>
+    <td>12</td>
+    <td>10</td>
     <td>2</td>
-    <td>2</td>
-    <td>0</td>
     <td>0</td>
     <td>&nbsp;</td>
 </tr>
