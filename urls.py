@@ -66,13 +66,14 @@ class Url(unittest.TestCase):
         urls_dict = self.urls_dict
         for key, value in urls_dict.iteritems():
             print
+            print key
             response = requests.get(urls_dict[key])
             # print urls_dict[key]
             # print response.status_code
             try:
                 assert response.status_code == 200
                 assert response.text.__contains__(self.check_str[key])
-                print key, urls_dict[key], response.status_code
+                print urls_dict[key], response.status_code
             except Exception, e:
                 print e
                 print key, "fail"
