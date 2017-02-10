@@ -5,6 +5,7 @@ import requests
 # 检查
 import sys
 
+from celerycheck import Celerycheck
 from urls import Url
 
 if sys.argv[1] == "dev":
@@ -20,5 +21,10 @@ for key, value in urlsdict.iteritems():
     print urlsdict[key]
     print response.status_code
     # print urlsdict[key] + response.text
-    assert response.status_code == 200
-    assert response.text.__contains__(checkstr[key])
+    try:
+        assert response.status_code == 200
+        assert response.text.__contains__(checkstr[key])
+    except Exception,e:
+        print e
+
+Celerycheck().check()
