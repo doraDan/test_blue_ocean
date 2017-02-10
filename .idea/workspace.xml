@@ -37,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="celerycheck.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="celerycheck.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/celerycheck.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="27" column="49" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
+            <state relative-caret-position="422">
+              <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
               <folding>
                 <element signature="e#23#38#0" expanded="true" />
               </folding>
@@ -49,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="42" column="74" selection-start-line="42" selection-start-column="74" selection-end-line="42" selection-end-column="74" />
+            <state relative-caret-position="231">
+              <caret line="46" column="28" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -476,21 +476,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/celerycheck.py">
+    <entry file="file://$PROJECT_DIR$/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="27" column="49" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
-          <folding>
-            <element signature="e#23#38#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="231">
+          <caret line="46" column="28" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/urls.py">
+    <entry file="file://$PROJECT_DIR$/celerycheck.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="42" column="74" selection-start-line="42" selection-start-column="74" selection-end-line="42" selection-end-column="74" />
-          <folding />
+        <state relative-caret-position="422">
+          <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+          <folding>
+            <element signature="e#23#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
