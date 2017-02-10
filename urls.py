@@ -32,8 +32,9 @@ class Url(unittest.TestCase):
         "basic_server": http + "192.168.1.202:8090" + interface["basic_server"],
         "dfinance_coupon": http + "192.168.1.150:13101" + interface["dfinance_coupon"],
         "business_coupon": http + "192.168.1.201:8092" + interface["business_coupon"],
+        "accouting": http + "192.168.1.150:20010" + interface["accounting"]
     }
-    # "accouting": http + "192.168.1.150:20010" + interface["accounting"],
+
     urls_qa = {
         "openapi_new": http + "newopen.qa.imdada.cn" + interface["openapi_new"],
         "openapi_old": http + "public.qa.imdada.cn" + interface["openapi_old"],
@@ -43,9 +44,11 @@ class Url(unittest.TestCase):
         "order": http + "10.9.178.162:80" + interface["order"],
         "basic_server": http + "10.9.174.15:8080" + interface["basic_server"],
         "dfinance_coupon": http + "10.9.105.87:8080" + interface["dfinance_coupon"],
+        "accouting": http + "10.9.110.207:8080" + interface["accounting"],
         "business_coupon": http + "10.9.96.95:80" + interface["business_coupon"]
+
     }
-    # "accouting": http + "10.9.110.207:8080" + interface["accounting"],
+
     check_str = {
         "openapi_old": "ok",
         "openapi_new": "success",
@@ -55,9 +58,9 @@ class Url(unittest.TestCase):
         "order": "ok",
         "basic_server": "",
         "dfinance_coupon": "true",
-        "business_coupon": ""
+        "business_coupon": "",
+        "accouting": "true"
     }
-    # "accouting": "true",
 
     def test_check_server(self):
         """
