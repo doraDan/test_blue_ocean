@@ -24,16 +24,18 @@ class Celerycheck:
         # assert output.read().__contains__("worker")
         # assert output.read() != ""
         # assert 1 != 2
-        for key, value in self.qa_host.iteritems():
-            output = os.popen(self.qa_host[key])
+        for key, value in self.dev_host.iteritems():
+            output = os.popen(self.dev_host[key])
             str_output = output.read()
-            print self.qa_host[key]
-            print str_output
+            print self.dev_host[key]
+            # print str_output
+            print str_output.__len__()
             try:
-                assert str_output.__contains__()
+                assert str_output.__len__() > 0
                 print key, "ok"
-            except Exception,e:
+            except Exception, e:
                 print e
+                print key, "fail"
 
 if __name__ == "__main__":
     Celerycheck().check()
