@@ -24,10 +24,10 @@ class Celerycheck:
         # assert output.read().__contains__("worker")
         # assert output.read() != ""
         # assert 1 != 2
-        for key, value in self.dev_host.iteritems():
-            output = os.popen(self.dev_host[key])
+        for key, value in self.qa_host.iteritems():
+            output = os.popen(self.qa_host[key])
             str_output = output.read()
-            print self.dev_host[key]
+            print self.qa_host[key]
             # print str_output
             print str_output.__len__()
             try:
