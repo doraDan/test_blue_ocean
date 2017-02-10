@@ -1,30 +1,28 @@
-# -*- coding: utf8 -*-
-
-import requests
+# encoding:utf-8
 
 # 检查
 import sys
+import unittest
 
-from celerycheck import Celerycheck
+import HTMLTestRunner
+from celerycheck import CeleryCheck
 from urls import Url
+reload(sys)
+sys.setdefaultencoding('utf8')
 
-if sys.argv[1] == "dev":
-    urlsdict = Url.urls_dev
-elif sys.argv[1] == "qa":
-    urlsdict = Url.urls_qa
-checkstr = Url.check_str
+if __name__ == "__main__":
+    if sys.argv[1] == "dev":
+        Url.urls_dict = Url.urls_dev
+        CeleryCheck.celery_dict = CeleryCheck.dev_host
+    elif sys.argv[1] == "qa":
+        Url.urls_dict = Url.urls_qa
+        CeleryCheck.celery_dict = CeleryCheck.qa_host
+    result_path = "result.html"
+    fp = file(result_path, "wb")
+    suit = unittest.TestSuite()
+    suit.addTest(unittest.makeSuite(CeleryCheck))
+    suit.addTest(unittest.makeSuite(Url))
+    runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title="environment check result", description="")
+    result = unittest.TextTestResult("result.html","environment check","check.py")
+    runner.run(suit)
 
-for key, value in urlsdict.iteritems():
-    print
-    print key
-    response = requests.get(urlsdict[key])
-    print urlsdict[key]
-    print response.status_code
-    # print urlsdict[key] + response.text
-    try:
-        assert response.status_code == 200
-        assert response.text.__contains__(checkstr[key])
-    except Exception,e:
-        print e
-
-Celerycheck().check()

@@ -1,10 +1,15 @@
-# -*- coding: utf8 -*-
+# encoding:utf-8
+import unittest
 
-class Url:
-    def __init__(self):
-        pass
+import requests
 
+
+class Url(unittest.TestCase):
+    """检查各个环境服务是否启动"""
     http = "http://"
+    urls_dict = {
+
+    }
     interface = {
         "openapi_new": "/health",
         "openapi_old": "/openapi/healthcheck",
@@ -53,3 +58,21 @@ class Url:
         "business_coupon": ""
     }
     # "accouting": "true",
+
+    def test_check_url(self):
+        """
+            环境服务是否启动
+        """
+        urls_dict = self.urls_dict
+        for key, value in urls_dict.iteritems():
+            print
+            response = requests.get(urls_dict[key])
+            # print urls_dict[key]
+            # print response.status_code
+            try:
+                assert response.status_code == 200
+                assert response.text.__contains__(self.check_str[key])
+                print key, urls_dict[key], response.status_code
+            except Exception, e:
+                print e
+                print key, "fail"
