@@ -21,7 +21,7 @@ class CeleryCheck(unittest.TestCase):
         "celery_python": '''ssh app@10.9.158.110 "ps -ef |grep celery | grep -v grep"''',
     }
 
-    def test_check(self):
+    def test_check_celery(self):
         """celery检查"""
         host = self.celery_dict
         for key, value in host.iteritems():

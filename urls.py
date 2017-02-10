@@ -59,7 +59,7 @@ class Url(unittest.TestCase):
     }
     # "accouting": "true",
 
-    def test_check_url(self):
+    def test_check_server(self):
         """
             环境服务是否启动
         """
