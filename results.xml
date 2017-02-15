@@ -1,1 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?><testsuite errors="0" failures="0" name="pytest" skips="0" tests="2" time="0.101"><testcase classname="check.CeleryCheck" file="celerycheck.py" line="23" name="test_check_celery" time="0.000448226928711"></testcase><testcase classname="check.Url" file="urls.py" line="64" name="test_check_server" time="0.00026798248291"></testcase></testsuite>
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="0" failures="2" name="pytest" skips="0" tests="2" time="0.037"><testcase classname="celerycheck.CeleryCheck" file="celerycheck.py" line="33" name="test_check_celery_python" time="0.000369071960449"><failure message="KeyError: &apos;celery_python&apos;">self = &lt;celerycheck.CeleryCheck testMethod=test_check_celery_python&gt;
+
+    def test_check_celery_python(self):
+        &quot;&quot;&quot;celery_python服务&quot;&quot;&quot;
+&gt;       output = os.popen(self.celery_dict[&quot;celery_python&quot;])
+E       KeyError: &apos;celery_python&apos;
+
+celerycheck.py:36: KeyError</failure></testcase><testcase classname="celerycheck.CeleryCheck" file="celerycheck.py" line="24" name="test_check_order_celery" time="0.000272035598755"><failure message="KeyError: &apos;order_celery&apos;">self = &lt;celerycheck.CeleryCheck testMethod=test_check_order_celery&gt;
+
+    def test_check_order_celery(self):
+        &quot;&quot;&quot;order_celery服务&quot;&quot;&quot;
+&gt;       output = os.popen(self.celery_dict[&quot;order_celery&quot;])
+E       KeyError: &apos;order_celery&apos;
+
+celerycheck.py:27: KeyError</failure></testcase></testsuite>

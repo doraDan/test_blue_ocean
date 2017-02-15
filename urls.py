@@ -84,7 +84,7 @@ class Url(unittest.TestCase):
     def test_check_modelservice(self):
         """modelservice"""
         resopnse = requests.get(self.urls_dict["modelservice"])
-        assert resopnse.status_code == 201
+        assert resopnse.status_code == 200
         assert resopnse.text.__contains__(self.check_str["modelservice"])
 
     def test_check_api(self):

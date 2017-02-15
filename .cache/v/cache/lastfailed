@@ -1,0 +1,4 @@
+{
+  "celerycheck.py::CeleryCheck::test_check_celery_python": true, 
+  "celerycheck.py::CeleryCheck::test_check_order_celery": true
+}

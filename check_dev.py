@@ -11,18 +11,14 @@ reload(sys)
 sys.setdefaultencoding('utf8')
 
 if __name__ == "__main__":
-    if sys.argv[1] == "dev":
-        Url.urls_dict = Url.urls_dev
-        CeleryCheck.celery_dict = CeleryCheck.dev_host
-    elif sys.argv[1] == "qa":
-        Url.urls_dict = Url.urls_qa
-        CeleryCheck.celery_dict = CeleryCheck.qa_host
+    Url.urls_dict = Url.urls_dev
+    CeleryCheck.celery_dict = CeleryCheck.dev_host
     result_path = "result.html"
     fp = file(result_path, "wb")
     suit = unittest.TestSuite()
     suit.addTest(unittest.makeSuite(CeleryCheck))
     suit.addTest(unittest.makeSuite(Url))
     runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title="environment check result", description="")
-    result = unittest.TextTestResult("result.html","environment check","check.py")
+    result = unittest.TextTestResult("result.html","environment check","check_dev.py")
     runner.run(suit)
 
