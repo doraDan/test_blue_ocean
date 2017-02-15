@@ -20,7 +20,8 @@ class Url(unittest.TestCase):
         "accounting": "/accounting/health",
         "basic_server": "/basic-service-0.2.0/health",
         "dfinance_coupon": "/coupon/health",
-        "business_coupon": "/coupon_service/healthcheck"
+        "business_coupon": "/coupon_service/healthcheck",
+        "bdapi": "/health/check"
     }
     urls_dev = {
         "openapi_new": http + "192.168.1.202:8981" + interface["openapi_new"],
@@ -32,7 +33,8 @@ class Url(unittest.TestCase):
         "basic_server": http + "192.168.1.202:8090" + interface["basic_server"],
         "dfinance_coupon": http + "192.168.1.150:13101" + interface["dfinance_coupon"],
         "business_coupon": http + "192.168.1.201:8092" + interface["business_coupon"],
-        "accouting": http + "192.168.1.150:20010" + interface["accounting"]
+        "accouting": http + "192.168.1.150:20010" + interface["accounting"],
+        "bdapi": http + "bdapi.dev.imdada.cn" + interface["bdapi"]
     }
 
     urls_qa = {
@@ -45,7 +47,8 @@ class Url(unittest.TestCase):
         "basic_server": http + "10.9.174.15:8080" + interface["basic_server"],
         "dfinance_coupon": http + "10.9.105.87:8080" + interface["dfinance_coupon"],
         "accouting": http + "10.9.110.207:8080" + interface["accounting"],
-        "business_coupon": http + "10.9.96.95:80" + interface["business_coupon"]
+        "business_coupon": http + "10.9.96.95:80" + interface["business_coupon"],
+        "bdapi": http + "bdapi.qa.imdada.cn" + interface["bdapi"]
 
     }
 
@@ -59,9 +62,9 @@ class Url(unittest.TestCase):
         "basic_server": "",
         "dfinance_coupon": "true",
         "business_coupon": "",
-        "accouting": "true"
+        "accouting": "true",
+        "bdapi": "ok"
     }
-
 
     def test_check_openapi_old(self):
         """openAPI_老服务"""
@@ -122,6 +125,12 @@ class Url(unittest.TestCase):
         resopnse = requests.get(self.urls_dict["accouting"])
         assert resopnse.status_code == 200
         assert resopnse.text.__contains__(self.check_str["accouting"])
+
+    def test_check_bdapi(self):
+        """openAPI_老服务"""
+        resopnse = requests.get(self.urls_dict["bdapi"])
+        assert resopnse.status_code == 200
+        assert resopnse.text.__contains__(self.check_str["bdapi"])
 
     # def test_check_server(self):
     #     """

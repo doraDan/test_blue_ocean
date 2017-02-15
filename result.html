@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>environment check result</h1>
-<p class='attribute'><strong>Start Time:</strong> 2017-02-10 16:39:08</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:00.476474</p>
-<p class='attribute'><strong>Status:</strong> Pass 10 Failure 2</p>
+<p class='attribute'><strong>Start Time:</strong> 2017-02-15 18:08:51</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:09.707990</p>
+<p class='attribute'><strong>Status:</strong> Pass 12 Failure 1</p>
 
 <p class='description'></p>
 </div>
@@ -265,13 +265,13 @@ AssertionError
     </td>
 </tr>
 
-<tr class='failClass'>
+<tr class='passClass'>
     <td>urls.Url: 检查各个环境服务是否启动</td>
-    <td>10</td>
-    <td>9</td>
-    <td>1</td>
+    <td>11</td>
+    <td>11</td>
     <td>0</td>
-    <td><a href="javascript:showClassDetail('c2',10)">Detail</a></td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c2',11)">Detail</a></td>
 </tr>
 
 <tr id='pt2.1' class='hiddenRow'>
@@ -290,44 +290,21 @@ AssertionError
 </tr>
 
 <tr id='pt2.4' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_check_business_coupon: 优惠券-业务</div></td>
-    <td colspan='5' align='center'>pass</td>
-</tr>
-
-<tr id='pt2.5' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_check_dfinance: 账户</div></td>
-    <td colspan='5' align='center'>pass</td>
-</tr>
-
-<tr id='pt2.6' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_check_dfinance_coupon: 优惠券-账户</div></td>
-    <td colspan='5' align='center'>pass</td>
-</tr>
-
-<tr id='pt2.7' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_check_modelservice: modelservice</div></td>
-    <td colspan='5' align='center'>pass</td>
-</tr>
-
-<tr id='ft2.8' class='none'>
-    <td class='failCase'><div class='testcase'>test_check_openapi_new: openAPI_新服务</div></td>
+    <td class='none'><div class='testcase'>test_check_bdapi: openAPI_老服务</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.8')" >
-        fail</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.4')" >
+        pass</a>
 
-    <div id='div_ft2.8' class="popup_window">
+    <div id='div_pt2.4' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.8').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.4').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft2.8: Traceback (most recent call last):
-  File "/Users/yaodan/Documents/workspace/checkhealth/urls.py", line 75, in test_check_openapi_new
-    assert resopnse.status_code == 201
-AssertionError
+pt2.4: {"status":"ok","content":"ok"}
 
 
         </pre>
@@ -337,21 +314,46 @@ AssertionError
     </td>
 </tr>
 
+<tr id='pt2.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_check_business_coupon: 优惠券-业务</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt2.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_check_dfinance: 账户</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt2.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_check_dfinance_coupon: 优惠券-账户</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt2.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_check_modelservice: modelservice</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
 <tr id='pt2.9' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_check_openapi_old: openAPI_老服务</div></td>
+    <td class='none'><div class='testcase'>test_check_openapi_new: openAPI_新服务</div></td>
     <td colspan='5' align='center'>pass</td>
 </tr>
 
 <tr id='pt2.10' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_check_openapi_old: openAPI_老服务</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt2.11' class='hiddenRow'>
     <td class='none'><div class='testcase'>test_check_order: 订单(order/orderadd)</div></td>
     <td colspan='5' align='center'>pass</td>
 </tr>
 
 <tr id='total_row'>
     <td>Total</td>
+    <td>13</td>
     <td>12</td>
-    <td>10</td>
-    <td>2</td>
+    <td>1</td>
     <td>0</td>
     <td>&nbsp;</td>
 </tr>
