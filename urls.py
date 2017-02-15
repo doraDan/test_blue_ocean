@@ -120,7 +120,7 @@ class Url(unittest.TestCase):
     def test_check_accouting(self):
         """记账服务"""
         resopnse = requests.get(self.urls_dict["accouting"])
-        assert resopnse.status_code == 201
+        assert resopnse.status_code == 200
         assert resopnse.text.__contains__(self.check_str["accouting"])
 
     # def test_check_server(self):
