@@ -39,7 +39,7 @@ importlib==1.0.3
 iniparse==0.3.1
 ipaddress==1.0.17
 itsdangerous==0.24
-Jinja2==2.7.3
+Jinja2==2.11.3
 kombu==3.0.23
 linecache2==1.0.0
 macholib==1.5.1
