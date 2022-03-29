@@ -52,7 +52,7 @@ numpy==1.8.0rc1
 oauth2==1.5.211
 oauthlib==0.6.3
 ordereddict==1.1
-paramiko==2.0.2
+paramiko==2.10.1
 pbr==0.10.8
 py2app==0.7.3
 pyasn1==0.1.9
